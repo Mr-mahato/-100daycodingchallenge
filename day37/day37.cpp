@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main() {
+	// your code goes here
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        int arr[n];
+        for(int i=0;i<n;i++)
+        {
+            cin >> arr[i];
+        }
+        int temp[1000000] = {0};
+        for(int i=0;i<n;i++)
+        {
+            temp[arr[i]]++;
+        }
+        for(int i=0;i<100000;i++)
+        {
+            if(temp[i]%2!=0)
+            {
+                cout << i << endl;
+                break;
+            }
+        }
+        }
+	return 0;
+}
